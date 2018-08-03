@@ -185,7 +185,7 @@ class Application(AbstractApplication):
         return (self.client_id,)
 
     def allows_grant_type(self, *grant_types):
-        return bool( set([self.authorization_grant_type, self.GRANT_CLIENT_CREDENTIALS]) & grant_types )
+        return bool( set([self.authorization_grant_type, self.GRANT_CLIENT_CREDENTIALS]) & set(grant_types) )
 
 
 class AbstractGrant(models.Model):
