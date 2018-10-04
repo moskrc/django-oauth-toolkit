@@ -3,4 +3,10 @@
 from setuptools import setup
 
 
-setup()
+setup(
+    author=u'Rafael Muñoz Cárdenas',
+    author_email='rafael@humanitec.com',
+    packages=[
+        'oauth2_provider',
+    ],
+)
